@@ -48,7 +48,6 @@ string deal(string s1,int &e){
      return res;
 }
 
-
 int main(int argc, const char * argv[]) {
     string s1,s2,s3,s4;
     cin>>n>>s1>>s2;
