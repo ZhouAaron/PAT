@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		93FB5CF42287F644007827E6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93FB5CF32287F644007827E6 /* main.cpp */; };
+		93CD2444228AFE4900575447 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93CD2443228AFE4900575447 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		93FB5CEE2287F644007827E6 /* CopyFiles */ = {
+		93CD243E228AFE4900575447 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -23,12 +23,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		93FB5CF02287F644007827E6 /* DFS */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DFS; sourceTree = BUILT_PRODUCTS_DIR; };
-		93FB5CF32287F644007827E6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		93CD2440228AFE4900575447 /* PAT A1053 Path of Equal Weight */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "PAT A1053 Path of Equal Weight"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93CD2443228AFE4900575447 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		93FB5CED2287F644007827E6 /* Frameworks */ = {
+		93CD243D228AFE4900575447 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,94 +38,94 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		93FB5CE72287F644007827E6 = {
+		93CD2437228AFE4900575447 = {
 			isa = PBXGroup;
 			children = (
-				93FB5CF22287F644007827E6 /* DFS */,
-				93FB5CF12287F644007827E6 /* Products */,
+				93CD2442228AFE4900575447 /* PAT A1053 Path of Equal Weight */,
+				93CD2441228AFE4900575447 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		93FB5CF12287F644007827E6 /* Products */ = {
+		93CD2441228AFE4900575447 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				93FB5CF02287F644007827E6 /* DFS */,
+				93CD2440228AFE4900575447 /* PAT A1053 Path of Equal Weight */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		93FB5CF22287F644007827E6 /* DFS */ = {
+		93CD2442228AFE4900575447 /* PAT A1053 Path of Equal Weight */ = {
 			isa = PBXGroup;
 			children = (
-				93FB5CF32287F644007827E6 /* main.cpp */,
+				93CD2443228AFE4900575447 /* main.cpp */,
 			);
-			path = DFS;
+			path = "PAT A1053 Path of Equal Weight";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		93FB5CEF2287F644007827E6 /* DFS */ = {
+		93CD243F228AFE4900575447 /* PAT A1053 Path of Equal Weight */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 93FB5CF72287F644007827E6 /* Build configuration list for PBXNativeTarget "DFS" */;
+			buildConfigurationList = 93CD2447228AFE4900575447 /* Build configuration list for PBXNativeTarget "PAT A1053 Path of Equal Weight" */;
 			buildPhases = (
-				93FB5CEC2287F644007827E6 /* Sources */,
-				93FB5CED2287F644007827E6 /* Frameworks */,
-				93FB5CEE2287F644007827E6 /* CopyFiles */,
+				93CD243C228AFE4900575447 /* Sources */,
+				93CD243D228AFE4900575447 /* Frameworks */,
+				93CD243E228AFE4900575447 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = DFS;
-			productName = DFS;
-			productReference = 93FB5CF02287F644007827E6 /* DFS */;
+			name = "PAT A1053 Path of Equal Weight";
+			productName = "PAT A1053 Path of Equal Weight";
+			productReference = 93CD2440228AFE4900575447 /* PAT A1053 Path of Equal Weight */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		93FB5CE82287F644007827E6 /* Project object */ = {
+		93CD2438228AFE4900575447 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "周杰";
 				TargetAttributes = {
-					93FB5CEF2287F644007827E6 = {
+					93CD243F228AFE4900575447 = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
 				};
 			};
-			buildConfigurationList = 93FB5CEB2287F644007827E6 /* Build configuration list for PBXProject "DFS" */;
+			buildConfigurationList = 93CD243B228AFE4900575447 /* Build configuration list for PBXProject "PAT A1053 Path of Equal Weight" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 93FB5CE72287F644007827E6;
-			productRefGroup = 93FB5CF12287F644007827E6 /* Products */;
+			mainGroup = 93CD2437228AFE4900575447;
+			productRefGroup = 93CD2441228AFE4900575447 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				93FB5CEF2287F644007827E6 /* DFS */,
+				93CD243F228AFE4900575447 /* PAT A1053 Path of Equal Weight */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		93FB5CEC2287F644007827E6 /* Sources */ = {
+		93CD243C228AFE4900575447 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93FB5CF42287F644007827E6 /* main.cpp in Sources */,
+				93CD2444228AFE4900575447 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		93FB5CF52287F644007827E6 /* Debug */ = {
+		93CD2445228AFE4900575447 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -184,7 +184,7 @@
 			};
 			name = Debug;
 		};
-		93FB5CF62287F644007827E6 /* Release */ = {
+		93CD2446228AFE4900575447 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -236,7 +236,7 @@
 			};
 			name = Release;
 		};
-		93FB5CF82287F644007827E6 /* Debug */ = {
+		93CD2448228AFE4900575447 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -245,7 +245,7 @@
 			};
 			name = Debug;
 		};
-		93FB5CF92287F644007827E6 /* Release */ = {
+		93CD2449228AFE4900575447 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -257,25 +257,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		93FB5CEB2287F644007827E6 /* Build configuration list for PBXProject "DFS" */ = {
+		93CD243B228AFE4900575447 /* Build configuration list for PBXProject "PAT A1053 Path of Equal Weight" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				93FB5CF52287F644007827E6 /* Debug */,
-				93FB5CF62287F644007827E6 /* Release */,
+				93CD2445228AFE4900575447 /* Debug */,
+				93CD2446228AFE4900575447 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		93FB5CF72287F644007827E6 /* Build configuration list for PBXNativeTarget "DFS" */ = {
+		93CD2447228AFE4900575447 /* Build configuration list for PBXNativeTarget "PAT A1053 Path of Equal Weight" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				93FB5CF82287F644007827E6 /* Debug */,
-				93FB5CF92287F644007827E6 /* Release */,
+				93CD2448228AFE4900575447 /* Debug */,
+				93CD2449228AFE4900575447 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 93FB5CE82287F644007827E6 /* Project object */;
+	rootObject = 93CD2438228AFE4900575447 /* Project object */;
 }

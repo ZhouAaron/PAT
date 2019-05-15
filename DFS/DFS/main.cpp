@@ -2,55 +2,76 @@
 //  main.cpp
 //  DFS
 //
-//  Created by Aaron on 5/8/19.
+//  Created by Aaron on 5/12/19.
 //  Copyright © 2019 周杰. All rights reserved.
 //
 
 #include <iostream>
-const int maxn = 30;
-int n ,V,maxValue = 0;//物品数年，背包容量V，最大价值maxValue
-int w[maxn],c[maxn];//w为每件物品的重量， c为每件物品的价值
-//DEF，index为当前处理的物品编号
-//sumW，sumC分别为当前总重量和当前总价值
-void DFS(int index,int sumW,int sumC){
-    if (index == n) {//已经完成对n件物品的选择（死胡同）
-        if (sumW <= V && sumC>maxValue) {
-            //当当前总重量小于背包容量且背包里的价值大于之前物品最大价值时
-            maxValue = sumC;
-//            更新最大价值
-        }
-        return;
+#include <queue>
+using namespace std;
+const int maxn = 100;
+struct node {
+    int x,y;
+}Node;
+int n,m;//矩阵大小为n*m
+int matrix[maxn][maxn];//01矩阵
+bool inq[maxn][maxn] = {false};
+int X[4] = {0,0,1,-1};
+int Y[4] = {1,-1,0,0};
+
+bool judge(int x, int y){//判断坐标（x,y）是否需要访问
+    //越界返回false
+    if (x>=n||x<0||y>=m||y<0) {
+        return false;
     }
-    DFS(index + 1, sumW, sumC);//不选第index件物品
-    //选择第index件物品
-    DFS(index + 1, sumW + w[index], sumC + c[index]);
-    
+    //当前位置为0，或（x,y）已入过队，返回false
+    if (matrix[x][y] == 0 || inq[x][y] == true) {
+        return false;
+    }
+    return true;
 }
-//深度优先搜索改进
-void DFS1(int index , int sumW,int sumC){
-    if (index == n) {
-        return;
-    }
-    //不选第index件物品
-    DFS1(index + 1, sumW, sumC);
-    //当物品重量小于背包容量时
-    if (sumW + w[index]<=V) {
-        //当物品价值加上下一个物品价值大于最大价值时
-        if (sumC + c[index]>maxValue) {
-            maxValue = sumC + c[index];
+//BFS函数访问位置（x,y)所在的块，将该块中所有的“1”的inq都置为true
+void BFS(int x,int y){
+    queue<node> Q;
+    Node.x = x;Node.y = y;
+    Q.push(Node);//将结点Node入队
+    inq[x][y] = true;
+    while (!Q.empty()) {
+        node top = Q.front();//取出队首元素
+        Q.pop();//出队
+        //循环四次得到四个相邻位置
+        for (int i = 0; i<4; i++) {
+            int newX = top.x+X[i];
+            int newY = top.y+Y[i];
+            if (judge(newX, newY)) {//如果新位置（newX，newY）需要访问
+                //设置新的坐标
+                Node.x = newX;Node.y = newY;
+                //将结点Node加入队列
+                Q.push(Node);
+                //设置位置（newX，newY）已入过队
+                inq[newX][newY] = true;
+            }
         }
-        DFS1(index + 1, sumW+w[index], sumC+c[index]);
     }
 }
+
 int main(int argc, const char * argv[]) {
-    scanf("%d%d",&n,&V);
-    for (int i = 0; i<n; i++) {
-        scanf("%d",&w[i]);
+    scanf("%d%d",&n,&m);
+    //读入01矩阵
+    for (int x = 0; x<n; x++) {
+        for (int y = 0; y<m; y++) {
+            scanf("%d",&matrix[x][y]);
+        }
     }
-    for (int i = 0; i<n; i++) {
-        scanf("%d",&c[i]);
+    int ans = 0;//存放块数
+    for (int x = 0;x<n;x++){
+        for (int y = 0; y<m; y++) {
+            if (matrix[x][y] == 1&& inq[x][y] == false) {
+                ans++;
+                BFS(x, y);
+            }
+        }
     }
-    DFS(0, 0, 0);//初始化
-    printf("%d\n",maxValue);
+    printf("%d\n",ans);
     return 0;
 }
