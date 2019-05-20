@@ -13,11 +13,12 @@
 using namespace std;
 const int MAXV = 1010;
 struct Node{
-    int id;
-    int layer;
+    int id;//节点编号
+    int layer;//层数
 };
-vector<Node> Adj[MAXV];
+vector<Node> Adj[MAXV];//邻接表
 bool inq[MAXV] = {false};
+//starts为起始节点。L为层数上限
 int BFS(int s,int L){
     int numForward = 0;//转发数
     queue<Node> q;
@@ -26,7 +27,7 @@ int BFS(int s,int L){
     start.layer = 0;
     q.push(start);
     inq[start.id] = true;
-    while (q.empty()) {
+    while (!q.empty()) {
         Node topNode = q.front();
         q.pop();
         int u = topNode.id;
