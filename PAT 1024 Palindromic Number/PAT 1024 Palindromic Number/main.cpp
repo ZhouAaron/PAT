@@ -9,6 +9,10 @@
 #include <iostream>
 #include <string>
 #include <algorithm>
+<<<<<<< HEAD
+=======
+using namespace std;
+>>>>>>> refs/remotes/origin/master
 struct bigNum{
     int lens;
     int num[1000];
@@ -40,6 +44,7 @@ bigNum add(bigNum a, bigNum b){
     }
     return c;
 }
+<<<<<<< HEAD
 //bigNum reverse (bigNum a){
 //    bigNum b;
 //    for (int i = a.lens -1; i>=0; i--) {
@@ -47,6 +52,15 @@ bigNum add(bigNum a, bigNum b){
 //    }
 //    return b;
 //}
+=======
+bigNum reverse1 (bigNum a){
+    bigNum b;
+    for (int i = a.lens -1; i>=0; i--) {
+        b.num[a.lens - 1 -i] = a.num[i];
+    }
+    return b;
+}
+>>>>>>> refs/remotes/origin/master
 bool judge(bigNum st){
     int lens = st.lens;
     for (int i = 0; i<lens/2; i++) {
@@ -64,14 +78,28 @@ void showArray(bigNum a){
 }
 int main(int argc, const char * argv[]) {
     char str1[1000];
+<<<<<<< HEAD
     int n;
+=======
+>>>>>>> refs/remotes/origin/master
     int T,K = 0;
     scanf("%s %d",str1,&T);
     bigNum a = change(str1);
     while (K<T && judge(a) == false) {
         bigNum b = a;
+<<<<<<< HEAD
         reverse(b.lens,b.d+b.lens);
     }
+=======
+//        reverse(b.num, b.num + b.lens);
+        b =reverse1(b);
+        a = add(a, b);
+        K++;
+        
+    }
+    showArray(a);
+    printf("%d\n",K);
+>>>>>>> refs/remotes/origin/master
 //    bigNum b;
 //    scanf("%s %d",str1,&n);
 //    //一开始就是回文数
