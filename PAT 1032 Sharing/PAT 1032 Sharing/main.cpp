@@ -22,8 +22,6 @@ int main(int argc, const char * argv[]) {
     int address,next;
     char data;
     for (int i = 0; i<n; i++) {
-//        int addre;
-//        scanf("%d %c %d",&addre,&Node[addre].c,&Node[addre].next);
         scanf("%d %c %d",&address,&data,&next);
         Node[address].c = data;
         Node[address].next = next;
@@ -43,15 +41,6 @@ int main(int argc, const char * argv[]) {
     }else{
         printf("-1\n");
     }
-    //    for (int i = start1; Node[i].address != -1; Node[i].address = Node[i].next) {
-    //        char  c = Node[i].c;
-    //        for (int j = start2; Node[j].address != -1; Node[j].address = Node[j].next) {
-    //            if (c == Node[j].c) {
-    //                printf("%d",j);
-    //                break;
-    //            }
-    //        }
-    //    }
     
     return 0;
 }
